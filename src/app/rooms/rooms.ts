@@ -1,9 +1,15 @@
 import { Component } from '@angular/core';
 import {Room, RoomList} from './rooms.interface';
+import {NgClass, NgForOf, NgIf, NgStyle} from '@angular/common';
 
 @Component({
   selector: 'hinv-rooms',
-  imports: [],
+  imports: [
+    NgForOf,
+    NgIf,
+    NgClass,
+    NgStyle
+  ],
   templateUrl: './rooms.html',
   styleUrl: './rooms.scss'
 })

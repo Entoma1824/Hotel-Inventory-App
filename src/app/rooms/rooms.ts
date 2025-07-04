@@ -1,6 +1,16 @@
 import { Component } from '@angular/core';
 import {Room, RoomList} from './rooms.interface';
-import {NgClass, NgForOf, NgIf, NgStyle} from '@angular/common';
+import {
+  CurrencyPipe,
+  DatePipe, DecimalPipe,
+  JsonPipe,
+  NgClass,
+  NgForOf,
+  NgIf,
+  NgStyle,
+  PercentPipe, SlicePipe,
+  TitleCasePipe
+} from '@angular/common';
 
 @Component({
   selector: 'hinv-rooms',
@@ -8,7 +18,14 @@ import {NgClass, NgForOf, NgIf, NgStyle} from '@angular/common';
     NgForOf,
     NgIf,
     NgClass,
-    NgStyle
+    NgStyle,
+    DatePipe,
+    TitleCasePipe,
+    CurrencyPipe,
+    PercentPipe,
+    JsonPipe,
+    SlicePipe,
+    DecimalPipe
   ],
   templateUrl: './rooms.html',
   styleUrl: './rooms.scss'
@@ -38,6 +55,7 @@ export class Rooms {
       photos:'https://jp.pinterest.com/pin/728386939755379848/',
       checkinTime: new Date('11-Nov-2021'),
       checkoutTime: new Date('12-Nov-2021'),
+      rating: 4.5,
     },
     {
       roomNumber: 2,
@@ -47,6 +65,7 @@ export class Rooms {
       photos:'https://jp.pinterest.com/pin/728386939755379848/',
       checkinTime: new Date('11-Nov-2021'),
       checkoutTime: new Date('12-Nov-2021'),
+      rating: 3.456456,
     },
     {
       roomNumber: 3,
@@ -56,6 +75,7 @@ export class Rooms {
       photos:'https://jp.pinterest.com/pin/728386939755379848/',
       checkinTime: new Date('11-Nov-2021'),
       checkoutTime: new Date('12-Nov-2021'),
+      rating: 2.6,
     },
   ];
 
